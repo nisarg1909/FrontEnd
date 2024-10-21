@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>js demo4</title>
+  <script>
+    var count=1;
+    function counter(){
+      document.getElementById("output").innerHTML=`Count is ${count}`;
+      count++;
+    }
+  </script>
+</head>
+<body>
+  <h1 id="output">Count is 0</h1>
+  <button type="button" onclick="counter()">Click Me</button>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>homework 2</title>
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      document.getElementById("checkbtn").onclick= ()=>{
+        let maths = parseInt(document.getElementById("maths").value);
+        let physics = parseInt(document.getElementById("physics").value);
+        let chemistry = parseInt(document.getElementById("chemistry").value);
+
+        if (maths>=65 && physics>=55 && chemistry>=50 && (maths+physics+chemistry>=190 || maths+physics>=140)){
+          document.getElementById("output").innerHTML=`The candidate is eligible for admission`
+        }
+        else{
+          document.getElementById("output").innerHTML=`The candidate is not eligible for admission`
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1 id="output">Enter marks to check eligibility of candidate for admission</h1>
+  <form>
+    Maths: <input type="text" name="maths" id="maths"><br><br>
+    Physics: <input type="text" name="physics" id="physics"><br><br>
+    Chemistry: <input type="text" name="chemistry" id="chemistry"><br><br>
+    <button type="button" id="checkbtn">Submit</button>
+    <button type="reset">Clear</button>
+  </form>
+</body>
+</html>

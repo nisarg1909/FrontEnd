@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>homework 4</title>
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      document.getElementById("checkbtn").onclick= ()=>{
+        let temp = parseInt(document.getElementById("temp").value);
+        if(temp<0){
+          document.getElementById("output").innerHTML=`Freezing Weather`
+        }
+        else if(temp<10){
+          document.getElementById("output").innerHTML=`Very Cold Weather`
+        }
+        else if(temp<20){
+          document.getElementById("output").innerHTML=`Cold Weather`
+        }
+        else if(temp<30){
+          document.getElementById("output").innerHTML=`Normal Weather`
+        }
+        else if(temp<40){
+          document.getElementById("output").innerHTML=`Hot Weather`
+        }
+        else {
+          document.getElementById("output").innerHTML=`Very Hot Weather`
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+<h1>Enter Temperature in Celsius:</h1>
+<input type="text" name="temp" id="temp" placeholder="Enter Temperature">
+<button type="button" id="checkbtn">Submit</button>
+<h1 id="output"></h1>
+</body>
+</html>

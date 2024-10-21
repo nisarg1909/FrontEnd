@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>js demo10</title>
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      document.getElementById("checkbtn").onclick=()=>{
+        let no1= parseInt(document.getElementById("no1").value);
+        let no2= parseInt(document.getElementById("no2").value);
+        let no3= parseInt(document.getElementById("no3").value);
+
+        if(no1>0 && no2>0 && no3>0) {
+          if (no1 > no2 && no1 > no3) {
+            document.getElementById("answer").innerHTML = `${no1} is the greatest number`
+          } else if (no2 > no3 && no2 > no1) {
+            document.getElementById("answer").innerHTML = `${no2} is the greatest number`
+          } else {
+            document.getElementById("answer").innerHTML = `${no3} is the greatest number`
+          }
+        }
+        else {
+          document.getElementById("answer").innerHTML = `Invalid Number`
+        }
+      }
+    });
+
+
+
+  </script>
+</head>
+<body>
+Number1: <input type="text" name="no1" id="no1"><br>
+Number2: <input type="text" name="no2" id="no2"><br>
+Number3: <input type="text" name="no3" id="no3"><br>
+<button type="button" id="checkbtn">Check</button>
+<button type="reset">Reset</button>
+<h1 id="answer"></h1>
+</body>
+</html>

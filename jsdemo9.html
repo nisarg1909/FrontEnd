@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>js demo9</title>
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      let no1=0;
+      let no2=0;
+      let no3=0;
+      function value(){
+        no1= parseInt(document.getElementById("no1").value);
+        no2= parseInt(document.getElementById("no2").value);
+        no3= parseInt(document.getElementById("no3").value);
+      }
+
+      document.getElementById("addbtn").onclick=()=>{
+        value();
+        document.getElementById("answer").innerHTML=`Total is ${(no1+no2)*no3}`
+      }
+
+      document.getElementById("subbtn").onclick=()=>{
+        value();
+        document.getElementById("answer").innerHTML=`Subtraction is ${(no1-no2)*no3}`
+      }
+
+    });
+
+
+  </script>
+</head>
+<body>
+  <form>
+    Number1: <input type="text" name="no1" id="no1"><br>
+    Number2: <input type="text" name="no2" id="no2"><br>
+    Number3: <input type="text" name="no3" id="no3"><br>
+    <button type="button" id="addbtn">Add</button>
+    <button type="button" id="subbtn">Sub</button>
+    <button type="reset">Reset</button>
+  </form>
+  <h1 id="answer"></h1>
+</body>
+</html>

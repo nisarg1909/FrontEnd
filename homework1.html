@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>homework1</title>
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      document.getElementById("checkbtn").onclick= ()=>{
+        let no = parseInt(document.getElementById("no").value);
+        if (no%2===0){
+          document.getElementById("output").innerHTML=`Number is even`
+        }
+        else {
+          document.getElementById("output").innerHTML=`Number is odd`
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1 id="output">Enter number to check if it is odd or even</h1>
+  <form>
+    Enter number: <input type="text" name="no" id="no">
+    <button type="button" id="checkbtn">Check</button>
+  </form>
+</body>
+</html>

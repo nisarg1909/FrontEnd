@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>homework 3</title>
+  <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+      document.getElementById("checkbtn").onclick=()=>{
+        let no = parseInt(document.getElementById("no").value);
+        let name = document.getElementById("name").value;
+        let maths = parseInt(document.getElementById("maths").value);
+        let physics = parseInt(document.getElementById("physics").value);
+        let chemistry = parseInt(document.getElementById("chemistry").value);
+        let total = maths+physics+chemistry;
+        let percentage = (total/300)*100
+        let division=0;
+        if(percentage>=70){
+           division = "First Division";
+        }
+        else if (percentage>=55){
+           division = "Second Division";
+        }
+        else if (percentage>=35){
+          division = "Third Division";
+        }
+        else {
+          division = "Fail"
+        }
+        document.getElementById("output").innerHTML=`Roll No: ${no}\n Name: ${name}\n Physics: ${physics}\n
+        Chemistry: ${chemistry}\n Maths: ${maths}\n Total: ${total}\n Percentage: ${percentage}\n Division: ${division}`
+      }
+    });
+
+
+  </script>
+</head>
+<body>
+<form>
+  Roll Number: <input type="text" name="no" id="no"><br> <br>
+  Name: <input type="text" name="name" id="name"><br> <br>
+  Maths: <input type="text" name="maths" id="maths">
+  Physics: <input type="text" name="physics" id="physics">
+  Chemistry: <input type="text" name="chemistry" id="chemistry"><br> <br>
+  <button type="button" id="checkbtn">Submit</button>
+  <button type="reset">Clear</button>
+</form>
+<h1 id="output"></h1>
+</body>
+</html>
